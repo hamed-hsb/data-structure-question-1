@@ -1,4 +1,4 @@
-class ArrayCalculate {
+class ArrayCalculateV1 {
 
     fun sumWithFor(array: IntArray) : Int {
         var sum: Int = 0
