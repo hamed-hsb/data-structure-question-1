@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 fun main(args: Array<String>) {
@@ -14,21 +15,21 @@ fun main(args: Array<String>) {
     println("Enter array's length :")
     var arrLen = sc.nextInt()
 
-    var arr = IntArray(arrLen)
+    var arr = ArrayList<Int>()
 
     for (index in 0..arrLen-1){
        // println("Enter number ${index+1} :")
-        arr[index] = index+1000000 //sc.nextInt()
+        arr.add(index+1000000)
     }
 
     val startTime = System.currentTimeMillis()
     println("\n\n")
 
-    println("sumByRecursion : "+ ArrayCalculateV1().sumWithRecursion(arr,arrLen-1))
+    println("sumByRecursion : "+ ListCalculateV1().sumWithRecursion(arr,arrLen-1))
 
-    println("sumByFor : "+ ArrayCalculateV1().sumWithFor(arr))
+    println("sumByFor : "+ ListCalculateV1().sumWithFor(arr))
 
-    println("sumByWhile : "+ ArrayCalculateV1().sumWithWithWhile(arr))
+    println("sumByWhile : "+ ListCalculateV1().sumWithWithWhile(arr))
 
     println("\n")
     println("End of calculations " )
@@ -54,6 +55,8 @@ fun main(args: Array<String>) {
 
 
 }
+
+
 
 private const val MEGABYTE = 1024L * 1024L
 
